@@ -1,5 +1,5 @@
 #!/bin/sh -l
-sudo apt-get install -y git-ftp
+apk add --update-cache git-ftp
 git-ftp push \
     --user $INPUT_USER \
     --passwd $INPUT_PASSWORD \
