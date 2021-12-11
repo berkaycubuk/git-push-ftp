@@ -1,4 +1,4 @@
-#!/bin/sh -1
+#!/bin/sh -l
 sudo apt-get install -y git-ftp
 git-ftp push \
     --user $INPUT_USER \
