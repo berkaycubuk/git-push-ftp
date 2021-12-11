@@ -1,0 +1,19 @@
+name: 'Git Push FTP'
+description: 'Push your changes to FTP'
+inputs:
+    url:
+        description: 'URL of the FTP server'
+        required: true
+    username:
+        description: 'Username of the FTP user'
+        required: true
+    password:
+        description: 'Password of the FTP user'
+        required: true
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.url }}
+        - ${{ inputs.username }}
+        - ${{ inputs.password }}
